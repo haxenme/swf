@@ -329,7 +329,7 @@ class MovieClip extends format.display.MovieClip {
 								
 								if (shape.hasBitmapRepeat || shape.hasCurves || shape.hasGradientFill) {
 									
-									s.cacheAsBitmap = true; // temp fix
+									// s.cacheAsBitmap = true; // temp fix
 									
 								}
 								
@@ -346,7 +346,7 @@ class MovieClip extends format.display.MovieClip {
 							case staticTextSymbol (text):
 								
 								var s = new Shape();
-								s.cacheAsBitmap = true; // temp fix
+								// s.cacheAsBitmap = true; // temp fix
 								text.render (s.graphics);
 								displayObject = s;
 							

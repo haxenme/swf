@@ -118,7 +118,7 @@ class Button {
 				case shapeSymbol (shape):
 					
 					var s = new Shape ();
-					s.cacheAsBitmap = true; // temp fix
+					// s.cacheAsBitmap = true; // temp fix
 					//shape.Render(new nme.display.DebugGfx());
 					shape.render (s.graphics);
 					displayObject = s;
@@ -132,7 +132,7 @@ class Button {
 				case staticTextSymbol (text):
 					
 					var s = new Shape();
-					s.cacheAsBitmap = true; // temp fix
+					// s.cacheAsBitmap = true; // temp fix
 					text.render (s.graphics);
 					displayObject = s;
 				
