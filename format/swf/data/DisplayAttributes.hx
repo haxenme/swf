@@ -24,8 +24,7 @@ class DisplayAttributes {
 		
 		
 	}
-	
-	
+
 	public function apply (object:DisplayObject) {
 		
 		if (matrix != null) {
@@ -34,18 +33,12 @@ class DisplayAttributes {
 			
 		}
 		
-		if (colorTransform != null) {
-			
-			object.transform.colorTransform = colorTransform;
-			
-		}
+    object.transform.colorTransform = colorTransform;
 		
 		object.name = name;
 		
 		if (object.filters != filters) {
-			
 			object.filters = filters;
-			
 		}
 		
 		if (ratio != null && Std.is (object, MorphObject)) {
