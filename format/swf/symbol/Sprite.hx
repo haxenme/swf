@@ -58,7 +58,7 @@ class Sprite {
 			var depth = stream.readDepth ();
 			var matrix = stream.readMatrix ();
 			
-			var colorTransform:ColorTransform = null;
+			var colorTransform:ColorTransform = new ColorTransform();
 			
 			if (stream.getBytesLeft () > 0) {
 				
