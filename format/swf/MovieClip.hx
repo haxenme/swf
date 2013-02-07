@@ -53,6 +53,9 @@ class MovieClip extends format.display.MovieClip {
 				
 			}
 			
+			// currentLabels needs to be sorted by frame
+			currentLabels.sort(byFrame);
+			
 			activeObjects = new Array <ActiveObject> ();
 			
 			//gotoAndPlay (1);
@@ -65,6 +68,30 @@ class MovieClip extends format.display.MovieClip {
 			currentFrame = 1;
 			totalFrames = 1;
 			framesLoaded = 1;
+			
+		}
+		
+	}
+	
+	
+	/**
+	 * Sort FrameLabel objects by frame
+	 */
+	private function byFrame (a:FrameLabel, b:FrameLabel):Int {
+		
+		if (a.frame < b.frame) {
+			
+			return -1;
+			
+		}
+		else if (a.frame > b.frame) {
+			
+			return 1;
+			
+		}
+		else {
+			
+			return 0;
 			
 		}
 		
