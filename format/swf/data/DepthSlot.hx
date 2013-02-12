@@ -74,9 +74,7 @@ class DepthSlot {
 			cacheAttributes.matrix = matrix;
 		}
 		
-    if ( colorTransform != null ) {
-      cacheAttributes.colorTransform = colorTransform;
-    }
+    cacheAttributes.colorTransform = colorTransform;
 		
 		if (ratio != null) {
 			cacheAttributes.ratio = ratio;
