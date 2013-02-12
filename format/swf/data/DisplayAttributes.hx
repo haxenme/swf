@@ -33,7 +33,9 @@ class DisplayAttributes {
 			
 		}
 		
-    object.transform.colorTransform = colorTransform;
+    if ( colorTransform != null ) {
+      object.transform.colorTransform = colorTransform;
+    }
 		
 		object.name = name;
 		
