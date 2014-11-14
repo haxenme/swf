@@ -31,8 +31,10 @@ class DepthSlot {
 	
 	public function findClosestFrame (hintFrame:Int, frame:Int):Int {
 		
-		var last = hintFrame;
+		var last = 0;//hintFrame;
 		
+    /*
+    this code doesn't work... 
 		if (last >= attributes.length) {
 			
 			last = 0;
@@ -45,7 +47,7 @@ class DepthSlot {
 				
 			}
 			
-		}
+		}*/
 		
 		for (i in last...attributes.length) {
 			
@@ -65,30 +67,20 @@ class DepthSlot {
 	
 	
 	public function move (frame:Int, matrix:Matrix, colorTransform:ColorTransform, ratio:Null <Int>):Void {
-		
 		cacheAttributes = cacheAttributes.clone ();
 		cacheAttributes.frame = frame;
 		
 		if (matrix != null) {
-			
 			cacheAttributes.matrix = matrix;
-			
 		}
 		
-		if (colorTransform != null) {
-			
-			cacheAttributes.colorTransform = colorTransform;
-			
-		}
+    cacheAttributes.colorTransform = colorTransform;
 		
 		if (ratio != null) {
-			
 			cacheAttributes.ratio = ratio;
-			
 		}
 		
 		attributes.push (cacheAttributes);
-		
 	}
 	
 	

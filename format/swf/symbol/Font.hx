@@ -49,6 +49,9 @@ class Font {
 			fontName = stream.readPascalString ();
 			
 		}
+
+    fontName = "data_proximanova_bold_otf";
+    trace("fontName: " + fontName);
 		
 		var numGlyphs:Int = 0;
 		var fontBytes:Int = 0;

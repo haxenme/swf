@@ -164,8 +164,9 @@ class EditText {
 			
 		}
 		
+    textField.defaultTextFormat = textFormat;
 		textField.setTextFormat (textFormat);
-		textField.selectable = !noSelect;
+		textField.selectable = false; // !noSelect;
 		
 		//textField.embedFonts = useOutlines;
 		

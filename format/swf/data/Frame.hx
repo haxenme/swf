@@ -95,7 +95,7 @@ class Frame {
 		var attributes = new DisplayAttributes ();
 		attributes.frame = frame;
 		attributes.matrix = matrix;
-		attributes.colorTransform = colorTransform;
+		attributes.colorTransform = colorTransform == null ? new ColorTransform() : colorTransform;
 		attributes.ratio = ratio;
 		
 		if (name == null) {
